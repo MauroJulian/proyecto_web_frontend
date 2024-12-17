@@ -1,0 +1,48 @@
+<h1 class="text-center">Enviar Correo</h1>
+<form [formGroup]="emailForm" (ngSubmit)="sendEmail()">
+  <div class="form-floating mb-3">
+    <input
+      type="email"
+      class="form-control"
+      id="floatingInput"
+      placeholder="name@example.com"
+      formControlName="to"
+    />
+    <label for="floatingInput">Destinatario:</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      formControlName="subject"
+      placeholder="Asunto"
+    />
+    <label for="floatingInput">Asunto:</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      formControlName="snippet"
+      placeholder="Mensaje corto"
+    />
+    <label for="floatingInput">Mensaje corto:</label>
+  </div>
+
+  <div class="form-floating">
+    <textarea
+      class="form-control"
+      placeholder="Leave a comment here"
+      id="floatingTextarea2"
+      style="height: 300px"
+      formControlName="message"
+    ></textarea>
+    <label for="floatingTextarea2">Mensaje:</label>
+  </div>
+
+  <button mat-fab extended>Enviar<mat-icon>send</mat-icon></button>
+</form>
